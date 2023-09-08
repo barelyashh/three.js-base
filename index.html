@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>three_js_assign</title>
+      <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css">
+   </head>
+   <body>
+      <div id="list">
+         <img src="images/prototech.jpg" class="imaging">
+         <hr>
+         <details close>
+            <summary>Properties</summary>
+            <ul>
+               <li><input type="checkbox" class="checkbox-list" name="checkbox1"><label class="labeling">Wireframe</label></li>
+               <li><input type="checkbox" class="checkbox-list" name="checkbox2"><label class="labeling">Change color</label></li>
+               <li><input type="checkbox" class="checkbox-list" name="checkbox3"><label class="labeling">Highlight</label></li>
+               <li><input type="checkbox" class="checkbox-list" name="checkbox5"><label class="labeling">Enable Drag</label></li>
+               <li><input type="checkbox" class="checkbox-list" name="checkbox7"><label class="labeling">Zoom to fit</label></li>
+               <li><input type="checkbox" class="checkbox-list" name="checkbox6" id="enable_uploads"><label class="labeling">Textures</label></li>
+               <div id="uploads">
+                  <li><input type="file" id="fileuploads" name="files[]" accept="image/*"/></li>
+                  <li><input type="submit" id="submitimages" value="apply" onclick="applySelectedTexture()" /></li>
+               </div>
+               <li><input type="checkbox" class="checkbox-list" name="checkbox4"><label class="labeling">Remove</label></li>
+            </ul>
+         </details>
+         <hr>
+         <h5 class="geo">Geometries</h5>
+         <ul class="listing">
+            <li><button type="button" class="btn btn-link" onclick="changeToCone()">Cone</button></li>
+            <li><button type="button" class="btn btn-link" onclick="changeToCube()">Cube</button></li>
+            <li><button type="button" class="btn btn-link" onclick="changeToPyramid()">Pyramid</button></li>
+            <li><button type="button" class="btn btn-link" onclick="changeToSphere()">Sphere</button></li>
+            <li><button type="button" class="btn btn-link" onclick="addMultiple()">Add geometries</button></li>
+            <li><button type="button" class="btn btn-link" onclick="boxWithTexture()">Texture box</button></li>
+            <li><button type="button"  class="btn btn-link" onclick="facetedCube()">6 face cube</button></li>
+         </ul>
+         <h5 class="geo"> Functionalities</h5>
+         <ul class=listing>
+            <li><button type="button" class="btn btn-link" onclick="deleteLast()">Remove last</button></li>
+            <li><button type="button" class="btn btn-link" onclick="reset()">Delete geometries </button></li>
+            <li><button type="button"  class="btn btn-link"  onclick="divideScene()">Two scene</button></li>
+         </ul>
+      </div>
+      <div id="canvas2"></div>
+      <div id="canvas"></div>
+     
+      <div id="info">
+         <fieldset id="controls">
+            <legend id="description">Scene Initialised</legend>
+            <p id="userguide"></p>
+         </fieldset>
+
+      
+      </div>
+      <script type="text/javascript" src="js/lib/three.js"></script>
+      <script type="text/javascript" src="js/lib/TrackballControls.js"></script>
+      <script type="text/javascript" src="js/lib/DragControls.js"></script>
+      <script type="text/javascript" src="js/lib/OBJLoader.js"></script>
+      <script type="text/javascript" src="js/lib/stats.min.js"></script>
+      <script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+      <script type="text/javascript" src="js/func/init.js"></script>
+      <script type="text/javascript" src="js/func/functionalities.js"></script>
+      <script type="text/javascript" src="js/func/geometries.js"></script>
+      <script type="text/javascript" src="js/func/properties.js"></script>
+   </body>
+</html>
